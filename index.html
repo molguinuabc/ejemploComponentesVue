@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Primer Vue Program</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+</head><!--
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     -->
+
+<body>
+    <div id="miApp">
+        <div class="container">
+            <mi-alerta v-if="alerta" @mi-ok="alerta=false" @cancelado="alerta=false" titulo="Alerta">
+                ¿Estas seguro que quieres salir?
+            </mi-alerta>
+            <mi-tabla-estudiantes>Datos de estudiantes</mi-tabla-estudiantes>
+            <div style="text-align: center">
+            <button class="btn btn-primary" @click="alerta=true">Salir</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
